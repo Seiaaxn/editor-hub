@@ -30,12 +30,12 @@ export const admins: {
   img: string;
   imgUrl?: string;
 }[] = [
-  { name: "Raditz", role: "Owner", tag: "NX RadzySenpai`ft 𝙂𝘾", img: owner, imgUrl: "" },
-  { name: "Raditz", role: "Founder", tag: "NX RadzySenpai`ft 𝙂𝘾", img: founder, imgUrl: "" },
-  { name: "Farzz", role: "Admin 1", tag: "Farzz", img: admin1, imgUrl: "" },
-  { name: "Majo", role: "Admin 2", tag: "MAJO~nexarion'", img: admin2, imgUrl: "" },
-  { name: "Shin", role: "Admin 3", tag: "𝙎𝙝𝙮𝙯𝙣𝙥𝙧𝙨𝙩`ft 𝙉𝙓", img: admin3, imgUrl: "" },
-  { name: "Cyrene", role: "Bot & Security", tag: "Bot WhatsApp", img: bot, imgUrl: "" },
+  { name: "Si White", role: "Collab Member", tag: "—White〆NXR", img: admin1, imgUrl: "" },
+  { name: "Sakura", role: "Editor & Design", tag: "Sakura・NXR", img: admin2, imgUrl: "" },
+  { name: "Kuro", role: "Owner Nexarion", tag: "KuroNexarion`NCA", img: admin3, imgUrl: "" },
+  { name: "Yumi", role: "Bot & Security", tag: "YumiWangyy ft AP", img: admin4, imgUrl: "" },
+  { name: "Akira", role: "Meme Video", tag: "—Akira NXR ft CNL", img: admin5, imgUrl: "" },
+  { name: "Mira", role: "Selection Member", tag: "NXR | Mira`", img: admin6, imgUrl: "" },
 ];
 
 // 💡 Ganti `avatarUrl` dengan link foto profil (misal CDN, imgur, dll).
@@ -48,7 +48,7 @@ export const topMembers: {
   avatar: string;
   avatarUrl?: string;
 }[] = [
-  { rank: 1, name: "𝗦𝗮𝗻𝘇𝘇𝙏𝙤𝙧𝙞𝙖𝙯𝙯[𝙉𝙓]", level: 438, exp: 617528, avatar: member, avatarUrl: "https://kommodo.ai/i/lb1ugrVKOJv5tMBEUSbt" },
+  { rank: 1, name: "insra", level: 438, exp: 617528, avatar: admin3, avatarUrl: "" },
   { rank: 2, name: "riye", level: 787, exp: 599896, avatar: admin2, avatarUrl: "" },
   { rank: 3, name: "Sumika AI ✨", level: 777, exp: 526348, avatar: admin4, avatarUrl: "" },
   { rank: 4, name: "Kuro", level: 699, exp: 469147, avatar: admin1, avatarUrl: "" },
@@ -74,41 +74,41 @@ export const generations: {
 }[] = [
   {
     name: "Nexarion Gen 1",
-    tagline: "Gen Khusus Anomali. Banyak Anomali Jirs 😹🫪",
-    members: 104,
+    tagline: "Gen khusus follower tinggi. The legends.",
+    members: 475,
     img: admin3,
     imgUrl: "",
     groupLink: "https://chat.whatsapp.com/EKBwiGr7gMpCCkFkLfsjzu?mlu=2&s=cl&p=a",
   },
   {
     name: "Nexarion Gen 2",
-    tagline: "Coming Soon",
-    members: 10,
+    tagline: "Gen khusus pemula. Penuh anomali 😹",
+    members: 536,
     img: admin2,
     imgUrl: "",
-    groupLink: "-",
+    groupLink: "https://chat.whatsapp.com/JqBKCwH0LAtJdzFvYf9kEe?mlu=2&s=cl&p=a",
   },
   {
     name: "Nexarion Gen 3",
-    tagline: "Coming Soon",
-    members: 0,
+    tagline: "Generasi baru kreator editor.",
+    members: 312,
     img: admin4,
     imgUrl: "",
-    groupLink: "-",
+    groupLink: "",
   },
 ];
 
 export const selectionGroup = {
   name: "Group Seleksi Nexarion",
-  tagline: "Untuk Seleksi Nexarion, Jika Ingin Bergabung",
+  tagline: "Untuk editor serius yang ingin masuk barisan utama.",
   link: "https://chat.whatsapp.com/J5NHH868UBZAtmSfPUeNSh?mode=gi_t",
   requirements: [
-    "Bisa Mengedit Menggunakan Alight Motion/Capcut",
-    "Tidak Menggunakan Preset Orang lain",
-    "Paham Basic Editing (Keyframe, Mask, Transition, dll)",
-    "Punya Minimal 3 Karya Original Untuk Dikirim",
-    "Aktif & Sopan Di Dalam Group",
-    "Mau Mengikuti Event & Collab Nexarion",
-    "Tidak Sara, Tidak Toxic, hormati Admin/Owner",
+    "Bisa mengedit menggunakan Alight Motion",
+    "TIDAK menggunakan preset orang lain",
+    "Paham basic editing (keyframe, mask, transition, dll)",
+    "Punya minimal 3 karya original untuk dikirim",
+    "Aktif & sopan di dalam grup",
+    "Mau mengikuti event & collab Nexarion",
+    "Tidak SARA, tidak toxic, hormati senior",
   ],
 };
