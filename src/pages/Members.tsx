@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { generations } from "@/data/family";
+import { generations, pickImage } from "@/data/family";
 import { Users, ExternalLink, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -22,7 +22,7 @@ const Members = () => {
         {generations.map((g) => (
           <div key={g.name} className="surface surface-hover density-pad flex flex-col">
             <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-muted/40 flex items-center justify-center">
-              <img src={g.img} alt={g.name} loading="lazy" className="w-3/4 h-3/4 object-contain" />
+              <img src={pickImage(g.imgUrl, g.img)} alt={g.name} loading="lazy" className="w-3/4 h-3/4 object-contain" />
             </div>
             <h3 className="text-lg font-bold">{g.name}</h3>
             <p className="text-sm text-muted-foreground mt-1 mb-3 flex-1">{g.tagline}</p>
@@ -61,7 +61,7 @@ const Members = () => {
             {generations.map((g) => (
               <tr key={g.name} className="border-t border-border hover:bg-primary/5 transition-colors">
                 <td className="density-pad flex items-center gap-3">
-                  <img src={g.img} alt={g.name} loading="lazy" className="w-8 h-8 rounded-full bg-muted/40 object-cover" />
+                  <img src={pickImage(g.imgUrl, g.img)} alt={g.name} loading="lazy" className="w-8 h-8 rounded-full bg-muted/40 object-cover" />
                   {g.name}
                 </td>
                 <td className="density-pad text-right">

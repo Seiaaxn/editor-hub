@@ -1,4 +1,4 @@
-import { admins } from "@/data/family";
+import { admins, pickImage } from "@/data/family";
 import { Shield } from "lucide-react";
 
 const Admins = () => {
@@ -16,7 +16,7 @@ const Admins = () => {
           <div key={a.name} className="surface surface-hover density-pad text-center group">
             <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 p-1 mb-4">
               <img
-                src={a.img}
+                src={pickImage(a.imgUrl, a.img)}
                 alt={a.name}
                 loading="lazy"
                 className="w-full h-full rounded-full object-cover bg-muted/40"
