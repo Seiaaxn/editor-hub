@@ -6,27 +6,25 @@ import { Button } from "@/components/ui/button";
 const Members = () => {
   const total = generations.reduce((s, g) => s + g.members, 0);
   return (
-    <div className="container py-16 space-y-16">
-      <header className="text-center space-y-3">
-        <h1 className="text-5xl md:text-6xl font-bold">
+    <div className="container density-section space-y-12 max-w-5xl">
+      <header className="space-y-3">
+        <div className="chip"><Users className="h-3.5 w-3.5 text-primary" /> Direktori member</div>
+        <h1 className="text-4xl md:text-5xl font-bold">
           Member <span className="text-gradient">Nexarion</span>
         </h1>
-        <p className="text-muted-foreground">
-          Total <span className="text-foreground font-semibold">{total.toLocaleString()}</span> editor tergabung di seluruh generasi.
+        <p className="text-sm text-muted-foreground">
+          Total <span className="text-foreground font-semibold">{total.toLocaleString()}</span> editor tergabung
+          di seluruh generasi.
         </p>
       </header>
 
-      {/* Generation cards with join link */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {generations.map((g) => (
-          <div
-            key={g.name}
-            className="card-glow rounded-3xl p-6 border border-border/40 hover:border-primary/50 transition-smooth flex flex-col"
-          >
-            <div className="aspect-square rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-              <img src={g.img} alt={g.name} loading="lazy" className="w-3/4 h-3/4 object-contain anim-float" />
+          <div key={g.name} className="surface surface-hover density-pad flex flex-col">
+            <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-muted/40 flex items-center justify-center">
+              <img src={g.img} alt={g.name} loading="lazy" className="w-3/4 h-3/4 object-contain" />
             </div>
-            <h3 className="text-xl font-bold">{g.name}</h3>
+            <h3 className="text-lg font-bold">{g.name}</h3>
             <p className="text-sm text-muted-foreground mt-1 mb-3 flex-1">{g.tagline}</p>
             <div className="flex items-center gap-2 text-sm text-primary mb-4">
               <Users className="h-4 w-4" />
@@ -51,52 +49,53 @@ const Members = () => {
       </div>
 
       {/* Recap table */}
-      <div className="card-glow rounded-3xl overflow-hidden border border-border/50 max-w-3xl mx-auto">
-        <table className="w-full">
+      <div className="surface overflow-hidden">
+        <table className="w-full text-sm">
           <thead>
-            <tr className="bg-muted/30">
-              <th className="text-left p-5 font-semibold">Generasi</th>
-              <th className="text-right p-5 font-semibold">Jumlah</th>
+            <tr className="bg-muted/40 text-muted-foreground uppercase text-xs tracking-wider">
+              <th className="text-left density-pad font-semibold">Generasi</th>
+              <th className="text-right density-pad font-semibold">Jumlah</th>
             </tr>
           </thead>
           <tbody>
             {generations.map((g) => (
-              <tr key={g.name} className="border-t border-border/30 hover:bg-primary/5 transition-smooth">
-                <td className="p-5 flex items-center gap-3">
-                  <img src={g.img} alt={g.name} loading="lazy" className="w-10 h-10 rounded-full bg-muted/40" />
+              <tr key={g.name} className="border-t border-border hover:bg-primary/5 transition-colors">
+                <td className="density-pad flex items-center gap-3">
+                  <img src={g.img} alt={g.name} loading="lazy" className="w-8 h-8 rounded-full bg-muted/40 object-cover" />
                   {g.name}
                 </td>
-                <td className="p-5 text-right">
+                <td className="density-pad text-right">
                   <span className="inline-flex items-center gap-2 text-primary">
                     <Users className="h-4 w-4" />
-                    {g.members} member
+                    {g.members}
                   </span>
                 </td>
               </tr>
             ))}
-            <tr className="border-t border-border/30 bg-primary/5">
-              <td className="p-5 font-bold">Total</td>
-              <td className="p-5 text-right font-bold text-gradient">{total} member</td>
+            <tr className="border-t border-border bg-primary/5">
+              <td className="density-pad font-bold">Total</td>
+              <td className="density-pad text-right font-bold text-gradient">{total} member</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {/* CTA to selection page */}
-      <section className="relative rounded-3xl overflow-hidden border border-primary/40 card-glow p-8 md:p-10 max-w-4xl mx-auto text-center">
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-        <div className="relative space-y-4">
-          <ShieldCheck className="h-10 w-10 text-primary mx-auto" />
-          <h2 className="text-2xl md:text-3xl font-bold">
-            Mau gabung <span className="text-gradient">Group Seleksi</span>?
-          </h2>
-          <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            Khusus editor serius. Lihat syarat lengkap dan daftarkan dirimu di halaman Group Seleksi.
-          </p>
-          <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-            <Link to="/selection">Lihat Syarat Seleksi</Link>
-          </Button>
+      {/* CTA selection */}
+      <section className="surface density-pad flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+        <div className="flex items-start gap-4">
+          <div className="w-11 h-11 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
+            <ShieldCheck className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h2 className="font-semibold">Mau gabung Group Seleksi?</h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              Khusus editor serius. Cek syarat & isi formulir kelayakan.
+            </p>
+          </div>
         </div>
+        <Button asChild className="rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+          <Link to="/selection">Lihat Syarat</Link>
+        </Button>
       </section>
     </div>
   );
