@@ -53,7 +53,7 @@ export const generations = [
   },
   {
     name: "Nexarion Gen 3",
-    tagline: "Generasi baru kreator anime editor.",
+    tagline: "Generasi baru kreator editor.",
     members: 312,
     img: admin4,
     groupLink: "",
