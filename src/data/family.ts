@@ -48,7 +48,7 @@ export const topMembers: {
   avatar: string;
   avatarUrl?: string;
 }[] = [
-  { rank: 1, name: "𝗦𝗮𝗻𝘇𝘇𝙏𝙤𝙧𝙞𝙖𝙯𝙯[𝙉𝙓]", level: 438, exp: 617528, avatar: member, avatarUrl: "" },
+  { rank: 1, name: "𝗦𝗮𝗻𝘇𝘇𝙏𝙤𝙧𝙞𝙖𝙯𝙯[𝙉𝙓]", level: 438, exp: 617528, avatar: member, avatarUrl: "https://kommodo.ai/i/lb1ugrVKOJv5tMBEUSbt" },
   { rank: 2, name: "riye", level: 787, exp: 599896, avatar: admin2, avatarUrl: "" },
   { rank: 3, name: "Sumika AI ✨", level: 777, exp: 526348, avatar: admin4, avatarUrl: "" },
   { rank: 4, name: "Kuro", level: 699, exp: 469147, avatar: admin1, avatarUrl: "" },
