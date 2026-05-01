@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { generations, topMembers } from "@/data/family";
-import heroBg from "@/assets/hero-bg.jpg";
+import { generations, topMembers, heroBackground, pickImage } from "@/data/family";
 import {
   ArrowRight,
   Trophy,
@@ -17,7 +16,7 @@ const Home = () => {
       {/* HERO */}
       <section className="relative min-h-[78vh] flex items-center overflow-hidden">
         <img
-          src={heroBg}
+          src={heroBackground}
           alt="Nexarion editor studio backdrop"
           width={1920}
           height={1088}
@@ -98,7 +97,7 @@ const Home = () => {
             <div key={g.name} className="surface surface-hover density-pad group">
               <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-muted/40 flex items-center justify-center">
                 <img
-                  src={g.img}
+                  src={pickImage(g.imgUrl, g.img)}
                   alt={g.name}
                   loading="lazy"
                   className="w-3/4 h-3/4 object-contain transition-transform group-hover:scale-[1.03]"

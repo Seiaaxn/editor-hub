@@ -4,14 +4,38 @@ import admin3 from "@/assets/admin-3.png";
 import admin4 from "@/assets/admin-4.png";
 import admin5 from "@/assets/admin-5.png";
 import admin6 from "@/assets/admin-6.png";
+import defaultHeroBg from "@/assets/hero-bg.jpg";
 
-export const admins = [
-  { name: "Si White", role: "Collab Member", tag: "—White〆NXR", img: admin1 },
-  { name: "Sakura", role: "Editor & Design", tag: "Sakura・NXR", img: admin2 },
-  { name: "Kuro", role: "Owner Nexarion", tag: "KuroNexarion`NCA", img: admin3 },
-  { name: "Yumi", role: "Bot & Security", tag: "YumiWangyy ft AP", img: admin4 },
-  { name: "Akira", role: "Meme Video", tag: "—Akira NXR ft CNL", img: admin5 },
-  { name: "Mira", role: "Selection Member", tag: "NXR | Mira`", img: admin6 },
+/**
+ * 🎨 BACKGROUND HERO HOME
+ * Isi `heroBackgroundUrl` dengan link gambar (https://...) untuk mengganti
+ * background di halaman Home. Kosongkan ("") untuk pakai gambar default.
+ */
+export const heroBackgroundUrl = "";
+export const heroBackground = heroBackgroundUrl.trim() !== "" ? heroBackgroundUrl : defaultHeroBg;
+
+/** Helper: pilih URL kalau diisi, jika tidak fallback ke aset lokal. */
+export const pickImage = (url: string | undefined, fallback: string) =>
+  url && url.trim() !== "" ? url : fallback;
+
+/**
+ * 👤 ADMIN
+ * Isi `imgUrl` dengan link foto (https://...) untuk mengganti foto admin.
+ * Kosongkan ("") untuk pakai gambar lokal `img`.
+ */
+export const admins: {
+  name: string;
+  role: string;
+  tag: string;
+  img: string;
+  imgUrl?: string;
+}[] = [
+  { name: "Si White", role: "Collab Member", tag: "—White〆NXR", img: admin1, imgUrl: "" },
+  { name: "Sakura", role: "Editor & Design", tag: "Sakura・NXR", img: admin2, imgUrl: "" },
+  { name: "Kuro", role: "Owner Nexarion", tag: "KuroNexarion`NCA", img: admin3, imgUrl: "" },
+  { name: "Yumi", role: "Bot & Security", tag: "YumiWangyy ft AP", img: admin4, imgUrl: "" },
+  { name: "Akira", role: "Meme Video", tag: "—Akira NXR ft CNL", img: admin5, imgUrl: "" },
+  { name: "Mira", role: "Selection Member", tag: "NXR | Mira`", img: admin6, imgUrl: "" },
 ];
 
 // 💡 Ganti `avatarUrl` dengan link foto profil (misal CDN, imgur, dll).
@@ -36,12 +60,24 @@ export const topMembers: {
   { rank: 10, name: "de L ta", level: 352, exp: 197182, avatar: admin1, avatarUrl: "" },
 ];
 
-export const generations = [
+/**
+ * 👥 GENERATIONS / GROUP
+ * Isi `imgUrl` dengan link foto group (https://...). Kosongkan untuk default.
+ */
+export const generations: {
+  name: string;
+  tagline: string;
+  members: number;
+  img: string;
+  imgUrl?: string;
+  groupLink: string;
+}[] = [
   {
     name: "Nexarion Gen 1",
     tagline: "Gen khusus follower tinggi. The legends.",
     members: 475,
     img: admin3,
+    imgUrl: "",
     groupLink: "https://chat.whatsapp.com/EKBwiGr7gMpCCkFkLfsjzu?mlu=2&s=cl&p=a",
   },
   {
@@ -49,6 +85,7 @@ export const generations = [
     tagline: "Gen khusus pemula. Penuh anomali 😹",
     members: 536,
     img: admin2,
+    imgUrl: "",
     groupLink: "https://chat.whatsapp.com/JqBKCwH0LAtJdzFvYf9kEe?mlu=2&s=cl&p=a",
   },
   {
@@ -56,6 +93,7 @@ export const generations = [
     tagline: "Generasi baru kreator editor.",
     members: 312,
     img: admin4,
+    imgUrl: "",
     groupLink: "",
   },
 ];
