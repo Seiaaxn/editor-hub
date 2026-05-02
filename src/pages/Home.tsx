@@ -34,8 +34,8 @@ const Home = () => {
               untuk <span className="text-gradient">editor serius</span>.
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl">
-              Nexarion adalah komunitas editor yang fokus ke craft: keyframe rapi, transisi sehat, dan karya original.
-              Tidak ada preset siap pakai — semua dibuat sendiri.
+              Nexarion adalah sebuah komunitas untuk creator pemula
+              Tidak menerima member yang menggunakan preset orang lain
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <Button
@@ -62,9 +62,9 @@ const Home = () => {
       <section className="container density-section">
         <div className="grid sm:grid-cols-3 gap-4">
           {[
-            { label: "Total Member", value: "1,323", icon: Users },
+            { label: "Total Member", value: "100+", icon: Users },
             { label: "Top EXP", value: "617K", icon: Trophy },
-            { label: "Aktif Harian", value: "98%", icon: PlayCircle },
+            { label: "Aktif Harian", value: "80%", icon: PlayCircle },
           ].map((s) => (
             <div key={s.label} className="surface surface-hover density-pad flex items-center gap-4">
               <div className="w-11 h-11 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
