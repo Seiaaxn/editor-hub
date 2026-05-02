@@ -76,12 +76,12 @@ export const admins: {
   img: string;
   imgUrl?: string;
 }[] = [
-  { name: "Si White", role: "Collab Member", tag: "—White〆NXR", img: admin1, imgUrl: "" },
-  { name: "Sakura", role: "Editor & Design", tag: "Sakura・NXR", img: admin2, imgUrl: "" },
-  { name: "Kuro", role: "Owner Nexarion", tag: "KuroNexarion`NCA", img: admin3, imgUrl: "" },
-  { name: "Yumi", role: "Bot & Security", tag: "YumiWangyy ft AP", img: admin4, imgUrl: "" },
-  { name: "Akira", role: "Meme Video", tag: "—Akira NXR ft CNL", img: admin5, imgUrl: "" },
-  { name: "Mira", role: "Selection Member", tag: "NXR | Mira`", img: admin6, imgUrl: "" },
+  { name: "Raditz", role: "Owner", tag: "NX RadzySenpai`ft 𝙂𝘾", img: admin1, imgUrl: "" },
+  { name: "Farz", role: "Admin 1", tag: "Farzz", img: admin2, imgUrl: "" },
+  { name: "Zans", role: "Admin 2", tag: "Zans", img: admin3, imgUrl: "" },
+  { name: "Kirk", role: "Admin 3: "YumiWangyy ft AP", img: admin4, imgUrl: "" },
+  { name: "Majo", role: "Admin 4", tag: "MAJO~nexarion'", img: admin5, imgUrl: "" },
+  { name: "Shin", role: "Admin 5", tag: "𝙎𝙝𝙮𝙯𝙣𝙥𝙧𝙨𝙩`ft 𝙉𝙓", img: admin6, imgUrl: "" },
 ];
 
 // 💡 Ganti `avatarUrl` dengan link foto profil (misal CDN, imgur, dll).
@@ -94,16 +94,16 @@ export const topMembers: {
   avatar: string;
   avatarUrl?: string;
 }[] = [
-  { rank: 1, name: "insra", level: 438, exp: 617528, avatar: admin3, avatarUrl: "" },
-  { rank: 2, name: "riye", level: 787, exp: 599896, avatar: admin2, avatarUrl: "" },
-  { rank: 3, name: "Sumika AI ✨", level: 777, exp: 526348, avatar: admin4, avatarUrl: "" },
-  { rank: 4, name: "Kuro", level: 699, exp: 469147, avatar: admin1, avatarUrl: "" },
-  { rank: 5, name: "時崎|𝙆𝙐𝙍𝙐𝙈𝙄•𝘼𝙄", level: 572, exp: 401438, avatar: admin6, avatarUrl: "" },
-  { rank: 6, name: "vin", level: 570, exp: 357566, avatar: admin5, avatarUrl: "" },
-  { rank: 7, name: "𝗭𝗔𝗣𝗣𝗬", level: 537, exp: 297707, avatar: admin3, avatarUrl: "" },
-  { rank: 8, name: "Zumii store", level: 388, exp: 257538, avatar: admin2, avatarUrl: "" },
-  { rank: 9, name: "yeyaa", level: 371, exp: 213453, avatar: admin4, avatarUrl: "" },
-  { rank: 10, name: "de L ta", level: 352, exp: 197182, avatar: admin1, avatarUrl: "" },
+  { rank: 1, name: "Sanz", level: 438, exp: 617528, avatar: admin3, avatarUrl: "" },
+  { rank: 2, name: "Fik", level: 787, exp: 599896, avatar: admin2, avatarUrl: "" },
+  { rank: 3, name: "Rezz", level: 777, exp: 526348, avatar: admin4, avatarUrl: "" },
+  { rank: 4, name: "Eka", level: 699, exp: 469147, avatar: admin1, avatarUrl: "" },
+  { rank: 5, name: "Azen", level: 572, exp: 401438, avatar: admin6, avatarUrl: "" },
+  { rank: 6, name: "Light", level: 570, exp: 357566, avatar: admin5, avatarUrl: "" },
+  { rank: 7, name: "Rizz", level: 537, exp: 297707, avatar: admin3, avatarUrl: "" },
+  { rank: 8, name: "Shin", level: 388, exp: 257538, avatar: admin2, avatarUrl: "" },
+  { rank: 9, name: "Raditz", level: 371, exp: 213453, avatar: admin4, avatarUrl: "" },
+  { rank: 10, name: "Cyrene", level: 352, exp: 197182, avatar: admin1, avatarUrl: "" },
 ];
 
 /**
@@ -121,23 +121,23 @@ export const generations: {
   {
     name: "Nexarion Gen 1",
     tagline: "Gen khusus follower tinggi. The legends.",
-    members: 475,
+    members: 100+,
     img: admin3,
     imgUrl: "",
-    groupLink: "https://chat.whatsapp.com/EKBwiGr7gMpCCkFkLfsjzu?mlu=2&s=cl&p=a",
+    groupLink: "",
   },
   {
     name: "Nexarion Gen 2",
-    tagline: "Gen khusus pemula. Penuh anomali 😹",
-    members: 536,
+    tagline: "Coming Soon",
+    members: 10,
     img: admin2,
     imgUrl: "",
-    groupLink: "https://chat.whatsapp.com/JqBKCwH0LAtJdzFvYf9kEe?mlu=2&s=cl&p=a",
+    groupLink: "",
   },
   {
     name: "Nexarion Gen 3",
-    tagline: "Generasi baru kreator editor.",
-    members: 312,
+    tagline: "Coming Soon",
+    members: 0,
     img: admin4,
     imgUrl: "",
     groupLink: "",
@@ -146,7 +146,7 @@ export const generations: {
 
 export const selectionGroup = {
   name: "Group Seleksi Nexarion",
-  tagline: "Untuk editor serius yang ingin masuk barisan utama.",
+  tagline: "Untuk creator yang ingin masuk kedalam komunitas nexa.",
   link: "https://chat.whatsapp.com/J5NHH868UBZAtmSfPUeNSh?mode=gi_t",
   requirements: [
     "Bisa mengedit menggunakan Alight Motion",
@@ -155,6 +155,7 @@ export const selectionGroup = {
     "Punya minimal 3 karya original untuk dikirim",
     "Aktif & sopan di dalam grup",
     "Mau mengikuti event & collab Nexarion",
-    "Tidak SARA, tidak toxic, hormati senior",
+    "Tidak sara, tidak toxic, hormati admin/owner",
   ],
 };
+  
