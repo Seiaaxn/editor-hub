@@ -7,11 +7,13 @@ import Layout from "@/components/Layout";
 import { DensityProvider } from "@/hooks/use-density";
 import Home from "./pages/Home";
 import Members from "./pages/Members";
+import MembersList from "./pages/MembersList";
 import TopMembers from "./pages/TopMembers";
 import Admins from "./pages/Admins";
 import TikTokSearch from "./pages/TikTokSearch";
 import Selection from "./pages/Selection";
 import SelectionStatus from "./pages/SelectionStatus";
+import AvatarStatus from "./pages/AvatarStatus";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -27,10 +29,12 @@ const App = () => (
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/members" element={<Members />} />
+              <Route path="/members/list" element={<MembersList />} />
               <Route path="/top" element={<TopMembers />} />
               <Route path="/admins" element={<Admins />} />
               <Route path="/selection" element={<Selection />} />
               <Route path="/selection/status" element={<SelectionStatus />} />
+              <Route path="/avatars/status" element={<AvatarStatus />} />
               <Route path="/tiktok" element={<TikTokSearch />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
