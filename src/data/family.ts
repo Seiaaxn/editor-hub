@@ -120,8 +120,8 @@ export const generations: {
 }[] = [
   {
     name: "Nexarion Gen 1",
-    tagline: "Gen khusus follower tinggi. The legends.",
-    members: 100+,
+    tagline: "Gen khusus anomali",
+    members: 100,
     img: admin3,
     imgUrl: "",
     groupLink: "",
