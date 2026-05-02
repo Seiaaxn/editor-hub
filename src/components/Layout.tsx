@@ -13,7 +13,6 @@ const titles: Record<string, string> = {
   "/admins": "Admin",
   "/selection": "Group Seleksi",
   "/selection/status": "Status Seleksi",
-  "/avatars/status": "Status Avatar",
   "/tiktok": "Cek TikTok",
 };
 
