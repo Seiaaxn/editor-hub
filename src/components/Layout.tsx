@@ -52,7 +52,7 @@ const Layout = () => {
           </main>
           <footer className="border-t border-border mt-12">
             <div className="container py-6 text-center text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Nexarion · Komunitas editor kreatif.
+              © {new Date().getFullYear()} Nexarion · Create By Shin
             </div>
           </footer>
         </div>
