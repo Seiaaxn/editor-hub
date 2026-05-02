@@ -13,7 +13,6 @@ import Admins from "./pages/Admins";
 import TikTokSearch from "./pages/TikTokSearch";
 import Selection from "./pages/Selection";
 import SelectionStatus from "./pages/SelectionStatus";
-import AvatarStatus from "./pages/AvatarStatus";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,7 +33,6 @@ const App = () => (
               <Route path="/admins" element={<Admins />} />
               <Route path="/selection" element={<Selection />} />
               <Route path="/selection/status" element={<SelectionStatus />} />
-              <Route path="/avatars/status" element={<AvatarStatus />} />
               <Route path="/tiktok" element={<TikTokSearch />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
