@@ -10,6 +10,8 @@ import {
   Sparkles,
   LayoutGrid,
   Rows3,
+  Image as ImageIcon,
+  ListOrdered,
 } from "lucide-react";
 import {
   Sidebar,
@@ -34,14 +36,16 @@ const mainItems: Item[] = [
 ];
 
 const communityItems: Item[] = [
-  { title: "Members", url: "/members", icon: Users },
+  { title: "Members", url: "/members", icon: Users, end: true },
+  { title: "Daftar 105 Member", url: "/members/list", icon: ListOrdered },
   { title: "Top Member", url: "/top", icon: Trophy },
   { title: "Admin", url: "/admins", icon: Shield },
 ];
 
 const featureItems: Item[] = [
-  { title: "Group Seleksi", url: "/selection", icon: ShieldCheck },
+  { title: "Group Seleksi", url: "/selection", icon: ShieldCheck, end: true },
   { title: "Status Seleksi", url: "/selection/status", icon: ClipboardCheck },
+  { title: "Status Avatar", url: "/avatars/status", icon: ImageIcon },
   { title: "Cek TikTok", url: "/tiktok", icon: Search },
 ];
 

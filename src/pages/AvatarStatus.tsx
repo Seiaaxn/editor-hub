@@ -1,5 +1,5 @@
 import { members, hasMemberAvatar, getMemberAvatar, TOTAL_MEMBERS, topMembers } from "@/data/family";
-import { ImageCheck, ImageOff, Image as ImageIcon } from "lucide-react";
+import { BadgeCheck, ImageOff, Image as ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const AvatarStatus = () => {
@@ -13,7 +13,7 @@ const AvatarStatus = () => {
     <div className="container density-section max-w-6xl space-y-10">
       <header className="space-y-3">
         <div className="chip">
-          <ImageCheck className="h-3.5 w-3.5 text-primary" /> Audit avatar
+          <BadgeCheck className="h-3.5 w-3.5 text-primary" /> Audit avatar
         </div>
         <h1 className="text-4xl md:text-5xl font-bold">
           Status <span className="text-gradient">Avatar</span>
