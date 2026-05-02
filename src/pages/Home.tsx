@@ -30,8 +30,8 @@ const Home = () => {
               <Sparkles className="h-3.5 w-3.5 text-primary" /> Komunitas editor kreatif
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
-              Studio kolaborasi <br />
-              untuk <span className="text-gradient">editor serius</span>.
+              Selamat Datang <br />
+              DI <span className="text-gradient">Komunitas Nexarion</span>.
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl">
               Nexarion adalah sebuah komunitas untuk creator pemula
