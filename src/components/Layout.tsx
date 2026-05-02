@@ -8,10 +8,12 @@ import { cn } from "@/lib/utils";
 const titles: Record<string, string> = {
   "/": "Home",
   "/members": "Members",
+  "/members/list": "Daftar 105 Member",
   "/top": "Top Member",
   "/admins": "Admin",
   "/selection": "Group Seleksi",
   "/selection/status": "Status Seleksi",
+  "/avatars/status": "Status Avatar",
   "/tiktok": "Cek TikTok",
 };
 

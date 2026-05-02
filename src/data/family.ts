@@ -5,6 +5,36 @@ import admin4 from "@/assets/admin-4.png";
 import admin5 from "@/assets/admin-5.png";
 import admin6 from "@/assets/admin-6.png";
 import defaultHeroBg from "@/assets/hero-bg.jpg";
+import avatarDefault from "@/assets/avatar-default.png";
+
+/**
+ * 🖼️ AVATAR DEFAULT (fallback)
+ * Dipakai untuk member yang belum punya foto di src/assets/.
+ */
+export const defaultAvatar = avatarDefault;
+
+/**
+ * 📦 AUTO-LOAD MEMBER AVATAR DARI src/assets
+ * Letakkan file dengan nama: member-1.png ... member-105.png (juga .jpg/.jpeg/.webp)
+ * di folder src/assets/. File yang ada akan otomatis terdeteksi & dipetakan
+ * ke member dengan nomor yang sama. Yang belum ada → pakai defaultAvatar.
+ */
+const memberAvatarModules = import.meta.glob(
+  "../assets/member-*.{png,jpg,jpeg,webp}",
+  { eager: true, import: "default" },
+) as Record<string, string>;
+
+export const memberAvatars: Record<number, string> = {};
+for (const [path, url] of Object.entries(memberAvatarModules)) {
+  const m = path.match(/member-(\d+)\.(png|jpg|jpeg|webp)$/i);
+  if (m) memberAvatars[Number(m[1])] = url;
+}
+
+/** Cek apakah member nomor N sudah punya foto di src/assets. */
+export const hasMemberAvatar = (id: number) => Boolean(memberAvatars[id]);
+
+/** Ambil URL avatar member; fallback ke defaultAvatar bila belum ada. */
+export const getMemberAvatar = (id: number) => memberAvatars[id] ?? defaultAvatar;
 
 /**
  * 🎨 BACKGROUND HERO HOME
@@ -17,6 +47,22 @@ export const heroBackground = heroBackgroundUrl.trim() !== "" ? heroBackgroundUr
 /** Helper: pilih URL kalau diisi, jika tidak fallback ke aset lokal. */
 export const pickImage = (url: string | undefined, fallback: string) =>
   url && url.trim() !== "" ? url : fallback;
+
+/**
+ * 🧑‍🎨 LIST 105 MEMBER NEXARION
+ * Edit `name` di sini untuk mengganti nama member.
+ * Untuk foto, taruh file `member-<id>.png` di `src/assets/` —
+ * akan otomatis ter-load lewat `memberAvatars`.
+ */
+export const TOTAL_MEMBERS = 105;
+export type MemberEntry = { id: number; name: string; gen: number };
+
+export const members: MemberEntry[] = Array.from({ length: TOTAL_MEMBERS }, (_, i) => {
+  const id = i + 1;
+  // Bagi rata ke 3 generasi
+  const gen = id <= 35 ? 1 : id <= 70 ? 2 : 3;
+  return { id, name: `Member ${id}`, gen };
+});
 
 /**
  * 👤 ADMIN
