@@ -79,7 +79,7 @@ export const admins: {
   { name: "Raditz", role: "Owner", tag: "NX RadzySenpai`ft 𝙂𝘾", img: admin1, imgUrl: "" },
   { name: "Farz", role: "Admin 1", tag: "Farzz", img: admin2, imgUrl: "" },
   { name: "Zans", role: "Admin 2", tag: "Zans", img: admin3, imgUrl: "" },
-  { name: "Kirk", role: "Admin 3: "YumiWangyy ft AP", img: admin4, imgUrl: "" },
+  { name: "Kirk", role: "Admin 3:", tag: "Kirk", img: admin4, imgUrl: "" },
   { name: "Majo", role: "Admin 4", tag: "MAJO~nexarion'", img: admin5, imgUrl: "" },
   { name: "Shin", role: "Admin 5", tag: "𝙎𝙝𝙮𝙯𝙣𝙥𝙧𝙨𝙩`ft 𝙉𝙓", img: admin6, imgUrl: "" },
 ];
