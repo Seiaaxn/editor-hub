@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { members, getMemberAvatar, hasMemberAvatar, TOTAL_MEMBERS } from "@/data/family";
 import { Input } from "@/components/ui/input";
-import { Search, Users, ImageOff, ImageIcon } from "lucide-react";
+import { Search, Users, ImageOff, Image as ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const MembersList = () => {
